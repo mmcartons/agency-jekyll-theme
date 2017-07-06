@@ -11,7 +11,7 @@ body {
 }
 
 .text-muted {
-    color: #{{ site.data.template.color.muted }};
+    color: {{ site.data.template.color.muted }};
 }
 
 .text-primary {
@@ -62,7 +62,6 @@ h6 {
 }
 
 .bg-light-gray {
-    background-color: #f7f7f7;
 }
 
 .bg-darkest-gray {
@@ -120,13 +119,13 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-xl {
     padding: 20px 40px;
-    border-color: #{{ site.data.template.color.primary }};
+    border-color: {{ site.data.template.color.primary }};
     border-radius: 3px;
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
     font-size: 18px;
     font-weight: 700;
-    color: #fff;
+    color: black;
     background-color: #{{ site.data.template.color.primary }};
 }
 
@@ -173,11 +172,12 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default {
     border-color: transparent;
     background-color: #222;
+    color:black;
 }
 
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #{{ site.data.template.color.primary }};
+    /*color: #{{ site.data.template.color.secondary }};*/
 }
 
 .navbar-default .navbar-brand:hover,
@@ -208,9 +208,9 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a {
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: #fff;
+    color: black;
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
     transition: all ease .35s;
@@ -257,7 +257,9 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-image: url('{{ site.baseurl }}/img/cardboardtexture.jpg');
+        background-size: cover;
+        box-shadow: 7px 4px 4px rgb(0, 0, 0);
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -269,7 +271,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    background-image: url('{{ site.baseurl }}/img/cardboardtexture.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -281,21 +283,21 @@ header {
 header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
+    color:black;
 }
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: {{ site.data.template.font.secondary }};
-    font-size: 22px;
+    font-size: 18px;
     font-style: italic;
     line-height: 22px;
 }
 
 header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
+    margin-bottom: 10px;
     font-family: {{ site.data.template.font.primary }};
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 50px;
 }
@@ -309,16 +311,15 @@ header .intro-text .intro-heading {
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: {{ site.data.template.font.secondary }};
-        font-size: 40px;
+        font-size: 22px;
         font-style: italic;
         line-height: 40px;
     }
 
     header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
+        margin-bottom: 10px;
         font-family: {{ site.data.template.font.primary }};
-        font-size: 75px;
+        font-size: 50px;
         font-weight: 700;
         line-height: 75px;
     }
@@ -332,6 +333,7 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
+    color:font-family: {{ site.data.template.font.primary }};
 }
 
 section h3.section-subheading {
@@ -446,7 +448,7 @@ section h3.section-subheading {
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
-    background-color: #f1f1f1;
+    background-color: #000000;
 }
 
 .timeline>li {
@@ -494,7 +496,7 @@ section h3.section-subheading {
     width: 80px;
     height: 80px;
     margin-left: 0;
-    border: 7px solid #f1f1f1;
+    border: 7px solid #000000;
     border-radius: 100%;
     text-align: center;
     color: #fff;
@@ -505,6 +507,8 @@ section h3.section-subheading {
     margin-top: 12px;
     font-size: 10px;
     line-height: 14px;
+    color: {{ site.data.template.color.primary }};
+
 }
 
 .timeline>li.timeline-inverted>.timeline-panel {
@@ -573,6 +577,8 @@ section h3.section-subheading {
         margin-top: 16px;
         font-size: 13px;
         line-height: 18px;
+        color: {{ site.data.template.color.primary }};
+
     }
 
     .timeline>li.timeline-inverted>.timeline-panel {
@@ -601,6 +607,8 @@ section h3.section-subheading {
         margin-top: 30px;
         font-size: 18px;
         line-height: 26px;
+        color: {{ site.data.template.color.primary }};
+
     }
 
     .timeline>li.timeline-inverted>.timeline-panel {
@@ -625,6 +633,8 @@ section h3.section-subheading {
 
     .timeline>li .timeline-image h4 {
         margin-top: 40px;
+        color: {{ site.data.template.color.primary }};
+
     }
 
     .timeline>li.timeline-inverted>.timeline-panel {
@@ -657,8 +667,8 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
+    /*background-color: #222;
+    background-image: url('{{ site.baseurl }}/img/map-image.png'); */
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -844,6 +854,28 @@ ul.social-buttons li a:active {
     transform: rotate(90deg);
 }
 
+.svg-content { 
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill:#fed136;
+}
+
+path {
+    /*fill:#fed136;*/
+    fill:black;
+}
+
+.svg-container { 
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    padding-bottom: 33%; 
+    vertical-align: middle; 
+    overflow: hidden; 
+}
+
 ::-moz-selection {
     text-shadow: none;
     background: #{{ site.data.template.color.primary }};
@@ -864,4 +896,7 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+    background-image: url('{{ site.baseurl }}/img/cardboardtexture.jpg');
+    background-size: contain;
+
 }
