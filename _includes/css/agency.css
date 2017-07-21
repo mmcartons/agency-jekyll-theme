@@ -674,7 +674,7 @@ section#contact {
 }
 
 section#contact .section-heading {
-    color: #fff;
+    color: #000000;
 }
 
 section#contact .form-group {
@@ -683,6 +683,8 @@ section#contact .form-group {
 
 section#contact .form-group input,
 section#contact .form-group textarea {
+    background: #000000;
+    color: #fff;
     padding: 20px;
 }
 
